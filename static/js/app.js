@@ -1,8 +1,13 @@
 let lang1Dropdown = document.getElementById('lang1');
 let lang2Dropdown = document.getElementById('lang2');
+
 let textInput = document.getElementById('text');
 let translationOutput = document.getElementById('translation');
+
 let submitButton = document.getElementById('submit');
+let other_lang_input = document.getElementById('other-lang-input');
+let other_lang_output = document.getElementById('other-lang-output');
+
 let input_lang = "";
 let output_lang = "";
 let input_text = "";
@@ -12,11 +17,21 @@ let output_text = "";
 lang1Dropdown.addEventListener('change', function() { 
     input_lang = lang1Dropdown.value;
     console.log("source language: "+input_lang);
+    if(input_lang=="other"){
+        other_lang_input.style.display = "block";
+    }else{
+        other_lang_input.style.display = "none";
+    }
 })
 
 lang2Dropdown.addEventListener('change', function() { 
     output_lang = lang2Dropdown.value;
     console.log("target language: "+output_lang);
+    if(output_lang=="other"){
+        other_lang_output.style.display = "block";
+    }else{
+        other_lang_input.style.display = "none";
+    }
 })
 
 
@@ -26,8 +41,15 @@ lang2Dropdown.addEventListener('change', function() {
 submitButton.addEventListener('click', function() {
     
     // update the values for language and text
+    if(input_lang=="other"){
+        input_lang = other_lang_input.value;
+    }
+    if(output_lang=="other"){
+        output_lang = other_lang_output.value;
+    }
     input_lang = lang1Dropdown.value;
     output_lang = lang2Dropdown.value;
+
     input_text = textInput.value;
     console.log("source language: "+input_lang);
     console.log("target language: "+output_lang);

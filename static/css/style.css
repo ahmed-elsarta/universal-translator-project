@@ -44,7 +44,12 @@ h1 {
     flex-direction: column;
     margin-right: 20px;
 }
-
+#other-lang-input {
+    display: none;
+}
+#other-lang-output {
+    display: none;
+}
 textarea {
     height: 35vh;
     margin-top: 1.5rem;
