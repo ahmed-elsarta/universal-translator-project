@@ -6,6 +6,7 @@ This project is a simple one-page web app that utilizes the incredible ability o
 
 ## Demo Video
 
+https://github.com/ahmed-elsarta/universal-translator-project/assets/89668727/fe7f6a8e-8f53-40be-a3f9-c911ab789da0
 
 ## How to use <a name="usage"> </a>
 1. use the following command to download the required packages (make sure to navigate to the project directory) \
