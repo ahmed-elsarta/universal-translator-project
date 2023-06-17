@@ -2,7 +2,8 @@
 not for merchantability or any other commercial use """
 
 import poe
-client = poe.Client("TOKEN-HERE")
+Token = "TOKEN-HERE"
+client = poe.Client(Token)
 
 def get_response(message):
   response =""
@@ -18,10 +19,10 @@ def clear_context():
 def translate(input_language, output_language, input_text):
     clear_context()
     if input_language == "Detect Language":
-        input_language = "the language of the text you are translating"
+        input_language = "its original language"
     prompt = f"""
     your task is to translate the text delimited by triple backticks from {input_language} to {output_language}:
-    only return the translated text, not the quotation marks or any other preamble or postscript
+    only return the final translated text without quotation marks or backticks or any other delimiters or other preamble or postscript
     ```{input_text}```
     """
     response = get_response(prompt)

@@ -30,7 +30,7 @@ lang2Dropdown.addEventListener('change', function() {
     if(output_lang=="other"){
         other_lang_output.style.display = "block";
     }else{
-        other_lang_input.style.display = "none";
+        other_lang_output.style.display = "none";
     }
 })
 
@@ -39,7 +39,7 @@ lang2Dropdown.addEventListener('change', function() {
 /* when submit button is pressed get the source language, target language
    source text, target text and send it to the server using an ajax xhr request */
 submitButton.addEventListener('click', function() {
-    
+    output_text = "Translating....";
     // update the values for language and text
     if(input_lang=="other"){
         input_lang = other_lang_input.value;

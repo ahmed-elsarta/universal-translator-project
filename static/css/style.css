@@ -142,7 +142,7 @@ button:hover {
 /* responsive layout for narrow screens */
 @media (max-width: 900px) or (max-device-width:480px){
     *{
-        font-size: 1.7rem;
+        font-size: 1.2rem;
     }
     .wrapper {
         width: 90vw;
